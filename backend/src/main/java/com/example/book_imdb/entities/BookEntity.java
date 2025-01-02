@@ -27,6 +27,10 @@ public class BookEntity {
         this.rating = rating;
     }
 
+    public BookEntity() {
+
+    }
+
     public Integer getBook_id() {
         return book_id;
     }
