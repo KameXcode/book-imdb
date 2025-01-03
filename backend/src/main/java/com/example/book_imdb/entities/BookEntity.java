@@ -19,7 +19,7 @@ public class BookEntity {
     private BigDecimal rating;
     private String imgUrl;
 
-    public BookEntity(Integer book_id, String title, String author,String description, LocalDate releaseDate, BigDecimal rating, String img_url) {
+    public BookEntity(Integer book_id, String title, String author, String description, LocalDate releaseDate, BigDecimal rating, String imgUrl) {
         this.book_id = book_id;
         this.title = title;
         this.author = author;
