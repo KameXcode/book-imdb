@@ -41,7 +41,7 @@ public class BookRepository{
            return book;
     }
     public void DeleteBook(Integer book_id){
-        String sql = "DELETE FROM BOOKS WHERE book_id ?";
+        String sql = "DELETE FROM BOOKS WHERE book_id = ?";
         jdbcTemplate.update(sql, book_id);
     }
 
