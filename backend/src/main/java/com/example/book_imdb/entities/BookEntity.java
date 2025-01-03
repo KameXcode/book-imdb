@@ -17,14 +17,16 @@ public class BookEntity {
     private String description;
     private LocalDate releaseDate;
     private BigDecimal rating;
+    private String imgUrl;
 
-    public BookEntity(Integer book_id, String title, String author,String description, LocalDate releaseDate, BigDecimal rating) {
+    public BookEntity(Integer book_id, String title, String author,String description, LocalDate releaseDate, BigDecimal rating, String img_url) {
         this.book_id = book_id;
         this.title = title;
         this.author = author;
         this.description = description;
         this.releaseDate = releaseDate;
         this.rating = rating;
+        this.imgUrl = imgUrl;
     }
 
     public BookEntity() {
@@ -77,5 +79,13 @@ public class BookEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }

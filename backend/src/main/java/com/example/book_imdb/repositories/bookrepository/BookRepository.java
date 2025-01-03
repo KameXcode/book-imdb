@@ -29,8 +29,8 @@ public class BookRepository{
     }
 
     public void createBook(BookEntity book){
-        String sql = "INSERT INTO books(title,author,description,release_date)" + "VALUES (?, ?, ?, ?)";
-        jdbcTemplate.update(sql, book.getTitle(), book.getAuthor(), book.getDescription(), book.getReleaseDate());
+        String sql = "INSERT INTO books(title,author,description,release_date)" + "VALUES (?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, book.getTitle(), book.getAuthor(), book.getDescription(), book.getReleaseDate(), book.getImgUrl());
 
     }
 

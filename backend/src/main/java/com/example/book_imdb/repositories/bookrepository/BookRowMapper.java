@@ -18,7 +18,9 @@ public class BookRowMapper implements RowMapper<BookEntity> {
                 rs.getString("author"),
                 rs.getString("description"),
                 rs.getDate("release_date").toLocalDate(),
-                rs.getBigDecimal("rating"));
+                rs.getBigDecimal("rating"),
+                rs.getString("img_url")
+        );
         return book;
 
     }
