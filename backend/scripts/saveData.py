@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2 import sql
 
-def insertBook(title, author, description, release_date, img_link):
+def insertBook(title, author, description, release_date, image_url):
     try:
         connection = psycopg2.connect(
             host="localhost",
@@ -12,10 +12,10 @@ def insertBook(title, author, description, release_date, img_link):
         )
         cursor = connection.cursor()
         insert_query = """
-            INSERT INTO books(title, author, description, release_date, img_link) 
-            VALUES (%s, %s, %s, %s)
+            INSERT INTO books(title, author, description, release_date, image_url) 
+            VALUES (%s, %s, %s, %s, %s)
             """
-        values = (title, author, description, release_date, img_link)
+        values = (title, author, description, release_date, image_url)
         cursor.execute(insert_query, values)
         connection.commit()
         print(values)
